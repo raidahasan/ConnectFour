@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class GraphicsPanel extends JPanel implements KeyListener, MouseListener, ActionListener {
     private BufferedImage background;
+    private BufferedImage c4board;
     private Player player1;
     private Player player2;
     private boolean[] pressedKeys;
@@ -18,6 +19,11 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
     public GraphicsPanel(String name, String name2) {
         try {
             background = ImageIO.read(new File("src/background.png"));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            c4board = ImageIO.read(new File("src/board.png"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -35,6 +41,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(background, 0, 0, null);
+        g.drawImage(c4board, 200, 20, null);
     }
 
     // key stuff

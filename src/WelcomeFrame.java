@@ -6,7 +6,7 @@ public class WelcomeFrame {
     public WelcomeFrame() {
         JFrame frame = new JFrame("Welcome");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 200);
+        frame.setSize(400, 500);
         frame.setLocationRelativeTo(null);
         panel = new WelcomePanel(frame);
         frame.add(panel);

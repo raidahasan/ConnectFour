@@ -23,7 +23,7 @@ public class WelcomePanel extends JPanel implements ActionListener {
             System.out.println(e.getMessage());
         }
         name1 = new JTextField(10);
-        name2 = new JTextField(15);
+        name2 = new JTextField(10);
         submitButton = new JButton("Submit");
         add(name1);
         add(name2);
@@ -34,12 +34,12 @@ public class WelcomePanel extends JPanel implements ActionListener {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.drawImage(c4, 150, 10, null);
         g.setFont(new Font("Arial", Font.BOLD, 16));
-        g.setColor(Color.RED);
-        g.drawString("Please enter your name:", 50, 30);
-        g.drawImage(c4, 200, 50, null);
-        name1.setLocation(50, 50);
-        name2.setLocation(100, 50);
+        g.setColor(Color.blue);
+        g.drawString("Enter names in the boxes below:", 50, 30);
+        name1.setLocation(30, 50);
+        name2.setLocation(170, 50);
         submitButton.setLocation(50, 100);
     }
     public void actionPerformed(ActionEvent e) {
