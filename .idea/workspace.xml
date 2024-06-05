@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70c162bb-0ddd-4dfa-b941-d2e0e5f579bc" name="Changes" comment="the frame done">
-      <change afterPath="$PROJECT_DIR$/src/RedCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WhiteCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redCircle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/whiteCircle.png" afterDir="false" />
+    <list default="true" id="70c162bb-0ddd-4dfa-b941-d2e0e5f579bc" name="Changes" comment="circle imported">
+      <change afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphicsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphicsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/background2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RedCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RedCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WhiteCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WhiteCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/redCircle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whiteCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/whiteCircle.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +39,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -112,13 +113,22 @@
       <option name="project" value="LOCAL" />
       <updated>1717080135437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="circle imported">
+      <option name="closed" value="true" />
+      <created>1717270632213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717270632213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
     <MESSAGE value="help" />
     <MESSAGE value="the frame done" />
-    <option name="LAST_COMMIT_MESSAGE" value="the frame done" />
+    <MESSAGE value="circle imported" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle imported" />
   </component>
 </project>
