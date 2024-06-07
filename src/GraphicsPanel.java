@@ -130,6 +130,8 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
         row6.setLocation(795, 0);
         row7.setLocation(908, 0);
 
+        //PLAYER ONE
+
         if(draw && p1Turn && r1){
             wC.moveDown();
             g.drawImage(wC.getCircle(), wC.getX(), wC.getY(), null);
@@ -299,6 +301,175 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             }
         }
 
+        //PLAYER TWO
+        if(draw && p2Turn && r1){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][0] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r1 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][0] == 0){
+                        board[i][0] = 2;
+                        r1 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r2){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][1] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r2 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][1] == 0){
+                        board[i][1] = 2;
+                        r2 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r3){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][2] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r3 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][2] == 0){
+                        board[i][2] = 2;
+                        r3 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r4){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][3] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r4 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][3] == 0){
+                        board[i][3] = 2;
+                        r4 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r5){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][4] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r5 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][4] == 0){
+                        board[i][4] = 2;
+                        r5 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r6){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][5] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r6 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][5] == 0){
+                        board[i][5] = 2;
+                        r6 = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(draw && p2Turn && r7){
+            rC.moveDown();
+            g.drawImage(rC.getCircle(), rC.getX(), rC.getY(), null);
+            int j = 0;
+            for(int i = 5; i>=0; i--){
+                if(board[i][6] == 0){
+                    j = 580 - ((5-i)*110);
+                    break;
+                }
+            }
+            if(rC.getY() >= j){
+                draw = false;
+                r7 = false;
+            }
+            if(p2Turn && !draw){
+                for(int i = 5; i>=0; i--){
+                    if(board[i][6] == 0){
+                        board[i][6] = 2;
+                        r7 = false;
+                        break;
+                    }
+                }
+            }
+        }
         g.drawImage(c4board, 200, 20, null);
     }
 
@@ -332,38 +503,45 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
                 r1= true;
                 draw = true;
                 wC = new WhiteCircle(200, 0);
+                rC = new RedCircle(200, 0);
             }else if(jb == row2){
                 r2= true;
                 draw = true;
                 wC = new WhiteCircle(313, 0);
+                rC = new RedCircle(313, 0);
             }else if(jb == row3){
                 r3= true;
                 draw = true;
                 wC = new WhiteCircle(426, 0);
+                rC = new RedCircle(426, 0);
             }else if(jb == row4){
                 r4= true;
                 draw = true;
                 wC = new WhiteCircle(539, 0);
+                rC = new RedCircle(539, 0);
             }else if(jb == row5){
                 r5= true;
                 draw = true;
                 wC = new WhiteCircle(652, 0);
+                rC = new RedCircle(652, 0);
             }else if(jb == row6){
                 r6= true;
                 draw = true;
                 wC = new WhiteCircle(765, 0);
+                rC = new RedCircle(765, 0);
             }else if(jb == row7){
                 r7= true;
                 draw = true;
                 wC = new WhiteCircle(878, 0);
+                rC = new RedCircle(878, 0);
             }
-//            if(p1Turn){
-//                p2Turn = true;
-//                p1Turn = false;
-//            }else{
-//                p2Turn = false;
-//                p1Turn = true;
-//            }
+            if(p1Turn){
+                p2Turn = true;
+                p1Turn = false;
+            }else{
+                p2Turn = false;
+                p1Turn = true;
+            }
         }
     }
 }
