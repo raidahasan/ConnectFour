@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70c162bb-0ddd-4dfa-b941-d2e0e5f579bc" name="Changes" comment="committing before I screw up">
+    <list default="true" id="70c162bb-0ddd-4dfa-b941-d2e0e5f579bc" name="Changes" comment="red works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphicsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphicsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whiteCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/whiteCircle.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717603544439</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="red works">
+      <option name="closed" value="true" />
+      <created>1717769723023</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717769723023</updated>
+    </task>
+    <task id="LOCAL-00007" summary="red works">
+      <option name="closed" value="true" />
+      <created>1717769737416</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717769737416</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +150,7 @@
     <MESSAGE value="the frame done" />
     <MESSAGE value="circle imported" />
     <MESSAGE value="committing before I screw up" />
-    <option name="LAST_COMMIT_MESSAGE" value="committing before I screw up" />
+    <MESSAGE value="red works" />
+    <option name="LAST_COMMIT_MESSAGE" value="red works" />
   </component>
 </project>

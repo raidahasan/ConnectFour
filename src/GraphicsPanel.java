@@ -106,13 +106,19 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
         for(int i = 0; i < 6; i++){
             for(int j = 0; j<7; j++){
                 if(board[i][j]==1){
-                    int x = 200 + (j*113); //(j*113)+35;
-                    int y = 580 - ((5-i)*110); //(i*110)+205;
+                    int x = 190 + (j*113); //(j*113)+35;
+                    int y = 573 - ((5-i)*110); //(i*110)+205;
                     g.drawImage(whiteCircle, x, y, null);
                 }else if(board[i][j]==2){
-                    int x = 200 + (j*113); //(j*113)+35;
-                    int y = 580 - ((5-i)*110); //(i*110)+205;
-                    g.drawImage(redCircle, x, y, null);
+                    if(j == 6){
+                        int x = 194 + (j*113); //(j*113)+35;
+                        int y = 580 - ((5-i)*110); //(i*110)+205;
+                        g.drawImage(redCircle, x, y, null);
+                    }else {
+                        int x = 200 + (j * 113); //(j*113)+35;
+                        int y = 580 - ((5 - i) * 110); //(i*110)+205;
+                        g.drawImage(redCircle, x, y, null);
+                    }
                 }
             }
         }
@@ -138,7 +144,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][0] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -162,7 +168,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][1] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -186,7 +192,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][2] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -210,7 +216,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][3] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -234,7 +240,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][4] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -258,7 +264,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][5] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -282,7 +288,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][6] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -308,7 +314,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][0] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -332,7 +338,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][1] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -356,7 +362,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][2] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -380,7 +386,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][3] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -404,7 +410,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][4] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -428,7 +434,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][5] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -452,7 +458,7 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             int j = 0;
             for(int i = 5; i>=0; i--){
                 if(board[i][6] == 0){
-                    j = 580 - ((5-i)*110);
+                    j = 573 - ((5-i)*110);
                     break;
                 }
             }
@@ -502,38 +508,38 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             if(jb == row1){
                 r1= true;
                 draw = true;
-                wC = new WhiteCircle(200, 0);
+                wC = new WhiteCircle(190, 0);
                 rC = new RedCircle(200, 0);
             }else if(jb == row2){
                 r2= true;
                 draw = true;
-                wC = new WhiteCircle(313, 0);
+                wC = new WhiteCircle(303, 0);
                 rC = new RedCircle(313, 0);
             }else if(jb == row3){
                 r3= true;
                 draw = true;
-                wC = new WhiteCircle(426, 0);
+                wC = new WhiteCircle(416, 0);
                 rC = new RedCircle(426, 0);
             }else if(jb == row4){
                 r4= true;
                 draw = true;
-                wC = new WhiteCircle(539, 0);
+                wC = new WhiteCircle(529, 0);
                 rC = new RedCircle(539, 0);
             }else if(jb == row5){
                 r5= true;
                 draw = true;
-                wC = new WhiteCircle(652, 0);
+                wC = new WhiteCircle(642, 0);
                 rC = new RedCircle(652, 0);
             }else if(jb == row6){
                 r6= true;
                 draw = true;
-                wC = new WhiteCircle(765, 0);
+                wC = new WhiteCircle(755, 0);
                 rC = new RedCircle(765, 0);
             }else if(jb == row7){
                 r7= true;
                 draw = true;
-                wC = new WhiteCircle(878, 0);
-                rC = new RedCircle(878, 0);
+                wC = new WhiteCircle(868, 0);
+                rC = new RedCircle(873, 0);
             }
             if(p1Turn){
                 p2Turn = true;
