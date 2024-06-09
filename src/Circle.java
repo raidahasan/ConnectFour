@@ -20,7 +20,7 @@ public class Circle {
     public int getX(){ return x; }
     public int getY(){ return y; }
 
-    public void moveDown(){ y+=6; }
+    public void moveDown(){ y+=9; }
     public BufferedImage getCircle(){
         return Circle;
     }
