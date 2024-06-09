@@ -57,8 +57,8 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
         setFocusable(true);
         requestFocusInWindow();
         pressedKeys = new boolean[128];
-        p1Turn =  false;
-        p2Turn = true;
+        p1Turn =  true;
+        p2Turn = false;
         row1 = new JButton("Row 1");
         row2 = new JButton("Row 2");
         row3 = new JButton("Row 3");
@@ -100,12 +100,19 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(background, 0, 0, null);
-        g.setFont(new Font("Courier New", Font.BOLD, 30));
+        g.setFont(new Font("Courier New", Font.PLAIN, 30));
+        if(p1Turn){
+            g.setFont(new Font("Courier New", Font.BOLD, 30));
+        }
         g.drawString("Player 1", 3, 40);
         g.drawString(playerOne, 3, 140);
-        g.drawString("(White):", 3, 90);
+        g.drawString("(Red):", 3, 90);
+        g.setFont(new Font("Courier New", Font.PLAIN, 30));
+        if(p2Turn){
+            g.setFont(new Font("Courier New", Font.BOLD, 30));
+        }
         g.drawString("Player 2", 1000, 40);
-        g.drawString("(Red):", 1000, 90);
+        g.drawString("(White):", 1000, 90);
         g.drawString(playerTwo, 1000, 140);
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
