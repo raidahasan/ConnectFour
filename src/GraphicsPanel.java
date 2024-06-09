@@ -503,12 +503,12 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             if (checkForFour(board, 1)) {
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 1 WINS", 200, 300);
+                g.drawString("PLAYER 2 WINS", 200, 300);
             }
             if (checkForFour(board, 2)) {
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 2 WINS", 200, 300);
+                g.drawString("PLAYER 1 WINS", 200, 300);
             }
 
     }
