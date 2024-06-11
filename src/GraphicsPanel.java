@@ -139,14 +139,14 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
                 setFocusable(false);
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString(playerOne, 200, 300);
+                g.drawString(playerTwo + " wins!", 200, 300);
                 run = false;
             }
             if (checkForFour(board, 2)) {
                 setFocusable(false);
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString(playerTwo, 200, 300);
+                g.drawString(playerOne + " wins!", 200, 300);
                 run = false;
             }
             row1.setLocation(230, 0);
@@ -499,15 +499,17 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             }
         }
 
+        g.drawImage(c4board, 200, 20, null);
+
         if (checkForFour(board, 1)) {
             g.setColor(Color.blue);
             g.setFont(new Font("Courier New", Font.BOLD, 100));
-            g.drawString("PLAYER 2 WINS", 200, 300);
+            g.drawString(playerTwo + " wins!", 200, 300);
         }
         if (checkForFour(board, 2)) {
             g.setColor(Color.blue);
             g.setFont(new Font("Courier New", Font.BOLD, 100));
-            g.drawString("PLAYER 1 WINS", 200, 300);
+            g.drawString(playerOne + " wins!", 200, 300);
         }
 
         if (tie()) {
@@ -516,7 +518,6 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             g.setFont(new Font("Courier New", Font.BOLD, 100));
             g.drawString("IT'S A TIE", 200, 300);
         }
-
     }
 
     public boolean tie(){
