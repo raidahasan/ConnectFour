@@ -101,14 +101,14 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
         super.paintComponent(g);
         g.drawImage(background, 0, 0, null);
         g.setFont(new Font("Courier New", Font.PLAIN, 30));
-        if(p1Turn){
+        if (p1Turn) {
             g.setFont(new Font("Courier New", Font.BOLD, 30));
         }
         g.drawString("Player 1", 3, 40);
         g.drawString(playerOne, 3, 140);
         g.drawString("(Red):", 3, 90);
         g.setFont(new Font("Courier New", Font.PLAIN, 30));
-        if(p2Turn){
+        if (p2Turn) {
             g.setFont(new Font("Courier New", Font.BOLD, 30));
         }
         g.drawString("Player 2", 1000, 40);
@@ -134,22 +134,21 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
             }
         }
 
-        if(run) {
+        if (run) {
             if (checkForFour(board, 1)) {
                 setFocusable(false);
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 1 WINS", 200, 300);
+                g.drawString(playerOne, 200, 300);
                 run = false;
             }
             if (checkForFour(board, 2)) {
                 setFocusable(false);
                 g.setColor(Color.blue);
                 g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 2 WINS", 200, 300);
+                g.drawString(playerTwo, 200, 300);
                 run = false;
             }
-
             row1.setLocation(230, 0);
             row2.setLocation(343, 0);
             row3.setLocation(456, 0);
@@ -499,18 +498,37 @@ public class GraphicsPanel extends JPanel implements KeyListener, MouseListener,
                 }
             }
         }
-            g.drawImage(c4board, 200, 20, null);
-            if (checkForFour(board, 1)) {
-                g.setColor(Color.blue);
-                g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 2 WINS", 200, 300);
-            }
-            if (checkForFour(board, 2)) {
-                g.setColor(Color.blue);
-                g.setFont(new Font("Courier New", Font.BOLD, 100));
-                g.drawString("PLAYER 1 WINS", 200, 300);
-            }
 
+        if (checkForFour(board, 1)) {
+            g.setColor(Color.blue);
+            g.setFont(new Font("Courier New", Font.BOLD, 100));
+            g.drawString("PLAYER 2 WINS", 200, 300);
+        }
+        if (checkForFour(board, 2)) {
+            g.setColor(Color.blue);
+            g.setFont(new Font("Courier New", Font.BOLD, 100));
+            g.drawString("PLAYER 1 WINS", 200, 300);
+        }
+
+        if (tie()) {
+            setFocusable(false);
+            g.setColor(Color.blue);
+            g.setFont(new Font("Courier New", Font.BOLD, 100));
+            g.drawString("IT'S A TIE", 200, 300);
+        }
+
+    }
+
+    public boolean tie(){
+        boolean over = true;
+        for(int i = 0; i< board.length; i++){
+            for(int j = 0; j< board[0].length; j++){
+                if(board[i][j] == 0){
+                    over = false;
+                }
+            }
+        }
+        return over;
     }
 
     public boolean checkForFour(int[][] board, int player) {
